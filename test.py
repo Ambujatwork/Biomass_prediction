@@ -3,8 +3,8 @@ import pandas as pd
 REFINERIES = 4
 DEPOT_CAP = 20000
 REFINERY_CAP = 100000
-biomass_forecast_2018 = pd.read_csv('forecast2.csv').set_index('Index')['2018'].to_dict()
-biomass_forecast_2019 = pd.read_csv('forecast2.csv').set_index('Index')['2019'].to_dict()
+biomass_forecast_2018 = pd.read_csv('Solution3.csv').set_index('Index')['2018'].to_dict()
+biomass_forecast_2019 = pd.read_csv('Solution3.csv').set_index('Index')['2019'].to_dict()
 distance_matrix = pd.read_csv("Distance_Matrix.csv", index_col=0).values
 
 def assign_biomass_to_depot(biomass_data, depots, distance_matrix):
@@ -116,7 +116,6 @@ def csv_output(max_solution):
     write_year_output(biomass_forecast_2019,'2019',refinery_indices,depot_indices)
         
 
-soln = [2405,  127, 1459,  963, 2125,   21, 1161, 2272, 1798,  247, 1419, 1550, 1866,  895,
- 2082, 1390, 2249,  552, 1076, 2395, 2348,  151,  421 , 490]
+soln = #Paste the output from Solution.py as a list here
 
 csv_output(soln)
